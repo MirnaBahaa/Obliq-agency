@@ -125,6 +125,129 @@ Many CSS classes use the `rt-` and `w-` prefixes. The stylesheets and the animat
 - Retouch or replace the packaging photo (`public/images/work-packaging.webp`); its wrapper still shows the old brand name.
 - Build the pages the navigation already links to: Company, Work, Service, Blog, Pricing, Contact, License, Style guide, Changelog, the 404 and password-protected pages, and the individual project and blog pages.
 
+## 6. Homepage Content
+
+This is the text that appears on the homepage, section by section, as written in `components/`. Sample items (projects, testimonials, statistics, blog posts) are marked as samples.
+
+### Navbar and menu
+
+- **Logo:** Obliq logo mark, links to the homepage.
+- **Bar:** social links (Fb - In - dr), the email address, a **Get in touch** call button, and a **menu** button.
+- **Menu panel:** Home, Company, Work *(+ CMS)*, Service, Blog *(+ CMS)*, Pricing, Contact. Social links: Facebook, Instagram, Dribble, LinkedIn, x. Contact: phone, email, and address. Footer links: 404, Password protected, style-guide, license.
+
+### Hero
+
+- **Label:** [ Creative agency **based in California** ]
+- **Title:** the OBLIQ wordmark, rising over a mountain silhouette.
+- **Photo collage (5 cards):** cocktail menu sign, skateboarders on a branded ramp, portrait in a red cap, tote bag on a red chair, yellow t-shirt on a bench.
+- **Intro:** "Great brands are never created by chance. They are built through countless intentional decisions toward one vision."
+- **Buttons:** Get in touch · Start something bold
+- **Subtext:** since **@2010**
+
+### Client logos
+
+- **Heading:** "Great brands are built with strategy, creativity, and purpose"
+- Two rows of six client logos, scrolling in opposite directions *(sample logos)*.
+
+### Work
+
+- **Heading:** WORK (the "O" is drawn as a ring) · **Label:** [ 04 **Selected projects** ]
+- **Projects** *(samples)*:
+
+| Project               | Description                              |
+| --------------------- | ---------------------------------------- |
+| Gimbono               | Brand Strategy, Visual Identity          |
+| Branding / UI-UX      | Creative branding platform, Web design   |
+| Mock-up billboard     | Branding Identity, Billboard             |
+| Packaging / Branding  | Fast food brand packaging                |
+
+- **Link:** See all works
+
+### Services
+
+- **Heading:** SERVICE
+- **Intro:** "We craft creative experiences that move brands forward. From strategy to visual identity and digital experiences, **we build bold creative solutions** designed to connect, engage, and grow."
+- **Button:** Explore services
+- **Stacking cards:**
+
+| Service                  | Text                                                                                                                       | Tags                                                        |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Brand Strategy           | Great brands are never created by chance. They are built through thoughtful strategy, creative direction, and a clear vision. | Brand Strategy, Typography, Visual Identity                 |
+| Marketing Campaigns      | Great campaigns are never created by chance. They are built through powerful concepts, creative storytelling, and a clear vision. | Campaign Strategy, Social Media, Ad Design, Voice & tone    |
+| 3D Object Visualization  | Great identities are never created by chance. They are built through thoughtful design, distinctive visuals, and a clear vision. | 3D Modelling, Motion Graphics, Product Render               |
+| Digital Experiences      | Great experiences are never created by chance. They are built through strategic design, engaging interactions, and a clear vision. | Frontend Dev, UI-UX Architecture                            |
+
+### Brand statement
+
+- **Heading (colours in word by word on scroll):** "Great brands are never created by chance. They are built through countless intentional decisions"
+- **Text:** "We craft experiences that move culture forward. From strategy that cuts through **noise to design that demands attention,** we build the systems ambitious brands need to win."
+- **Counters** *(sample figures)*:
+
+| Figure  | Label                       |
+| ------- | --------------------------- |
+| 92,630  | User engagement score       |
+| 15+     | Years of market leadership  |
+| 468     | Brand transformations       |
+| 98%     | Client success rate         |
+| 342     | Digital campaigns           |
+
+### Red section
+
+- **Heading:** "Turning ideas into iconic brands"
+- **Text:** "Great brands are never created by chance. They are built through countless intentional decisions working toward one vision."
+- **Intro:** "Obliq is a creative studio shaping bold brands and daring ideas."
+- **Label:** [ 06 **Selected services** ]
+
+### Video expand
+
+- A video grows from a small box into a full-screen background.
+- **Text (revealed word by word):** "we create bold ideas and *meaningful* brand experiences. *From strategy* and identity to campaigns and *digital* experiences, every detail is *crafted* with purpose and impact"
+- **Floating pills:** Explore works · Explore articles
+- **Tags:** Modern · Creative
+
+### Testimonials
+
+- **Heading:** CLIENTS SAY · **Label:** [ Hear from **our clients** ]
+- **Quotes** *(samples, both credited to Levino Thomas, Brand director @northlane, with five stars)*:
+  1. "Obliq challenged our thinking, asked the right questions, and pushed the creative beyond what we imagined. The process felt effortless and collaborative, with every idea bringing fresh perspective and meaningful impact to our brand."
+  2. "We came to Obliq with a rough idea, and they transformed it into a clear creative direction and stronger identity. They understood our audience deeply, made every decision intentional, and delivered a brand that feels both unexpected and authentically ours."
+
+### Blog
+
+- **Heading:** STORIES AND INSIGHTS · **Label:** [ 350+ **Happy customers** ]
+- **Button:** Explore articles
+- **Posts** *(samples, all dated August 26, 2026)*:
+  1. *(featured)* "Exploring the ideas, trends & strategies behind remarkable brands"
+  2. "What made the experience different from working with other agencies?"
+  3. "Fresh perspectives to help brands think bigger and move forward"
+
+### FAQ
+
+- **Heading:** FAQ · **Label:** [ Find quick **answers to the questions** we hear most often ]
+
+| Question                                              | Answer                                                                                                                              |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| What services does your creative agency offer?        | We offer branding, web design, digital experiences, content, and creative strategy tailored to help your business stand out and grow. |
+| How does your creative process work?                  | We start by understanding your goals, audience, and vision, then shape the strategy, design, and execution into a clear creative direction. |
+| Can you design a website from scratch?                | Yes, we can design your website from scratch, creating a unique visual direction, intuitive structure, and engaging experience for your brand. |
+| Do you work with existing brands?                     | Absolutely. We work with existing brands to refine their identity, strengthen their digital presence, and create experiences that feel consistent. |
+| Do you work with startups and established businesses? | Yes, we work with startups and established businesses, adapting our creative approach to match each brand’s goals, audience, and needs. |
+| Can you develop the websites you design?              | Yes, we can develop the websites we design, turning creative concepts into responsive, polished, and high-performing digital experiences. |
+| How do we get started?                                | Simply reach out with your project, goals, and ideas. We’ll discuss your needs, explore the right approach, and map out the next steps. |
+
+### Showcase gallery
+
+A pinned wall of nine tiles that zooms into the centre video tile: signage mockup, branded tag, drink can, film poster, team video, business card, spiral brochure, phone mockup, and tote bag.
+
+### Call to action and footer
+
+- **Call to action:** "Ready to create something meaningful that moves your brand forward?" · **Heading:** "Let’s build a brand that moves people" · **Button:** Start something bold
+- **Footer:** "Whether you have a project in mind, or just want to say hi." · email and phone *(placeholders)*
+- **Quick links:** Homepage, About, Service, Blogs, Portfolio
+- **Others:** License, 404 error, Password protected, Style-guide, Changelog
+- **Newsletter:** Join our newsletter (email field and submit button)
+- **Bottom:** OBLIQ wordmark · Get in touch · © 2026 Obliq. All rights reserved. · Follow us: Facebook, Instagram, X, LinkedIn
+
 ## Project Status
 
 | Field              | Value                       |
