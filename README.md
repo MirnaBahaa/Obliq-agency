@@ -1,126 +1,133 @@
-# Obliq Agency
+# Obliq Agency - Frontend
 
 ## 1. Description
 
-Obliq Agency is the marketing homepage for **Obliq**, a creative agency covering brand strategy, campaigns, 3D visualization and digital experiences. It is a single, heavily animated landing page built with Next.js and GSAP.
+Obliq Agency is a responsive, single-page website for **Obliq**, a creative agency, built with Next.js. The homepage includes a hero with a giant OBLIQ wordmark rising over a mountain and a five-card photo collage, two client-logo marquees, a selected-work grid, sticky stacking service cards, a scroll-coloured brand statement with animated counters, a red "Turning ideas into iconic brands" section, a video that expands to full screen, a testimonial marquee, blog cards, an FAQ accordion, a pinned showcase gallery that zooms into a video tile, and a call-to-action and footer that slide up over the gallery.
 
-The page has these sections, in order:
+Motion is built with GSAP and its ScrollTrigger plugin: the hero intro sequence, word-by-word heading reveals, number counters, sticky and pinned scroll scenes, marquees, the expanding video, blog-card hover wipes, and self-drawing button outlines. Desktop, tablet, phone landscape, and phone portrait each have their own layout. The site respects `prefers-reduced-motion` and shows a static layout to visitors who turn motion off.
 
-1. **Hero**: navbar with a slide-out menu, a giant OBLIQ wordmark rising over a mountain, and a five-card photo collage.
-2. **Client logos**: two marquee rows scrolling in opposite directions.
-3. **Work**: a 2×2 grid of selected projects.
-4. **Services**: four sticky cards that stack and shrink as you scroll.
-5. **Brand statement**: text that colors in word by word on scroll, plus animated counters.
-6. **Red section**: "Turning ideas into iconic brands".
-7. **Video expand**: a video that grows from a small box into a full-screen sticky video, with word-reveal text and floating pills.
-8. **Testimonials**: an auto-scrolling marquee that pauses on hover or focus.
-9. **Blog**: cards with a red wipe and a "View" button on hover.
-10. **FAQ**: an accordion.
-11. **Showcase gallery**: a pinned image wall that zooms into a video tile.
-12. **Call to action and footer**: they slide up over the gallery.
+The brand name and contact details are in `lib/brand.js`. Image and video URLs are in `lib/assets.js`. Section text is written directly in each component in `components/`. The site has no CMS, analytics, or environment variables and runs locally out of the box.
 
-The page adapts to four screen widths: desktop (992px and up), tablet (991px and below), mobile landscape (767px and below) and mobile portrait (479px and below). Visitors with "reduced motion" turned on get a static layout.
+> **Note:** The project details in this README (designer, status, and dates) are real. The content shown *on the website itself* is sample content: the client logos, projects, testimonials, blog posts, statistics, phone number, email, and office address are placeholders. Most photos and videos, and the Goli font, load from a remote CDN. Replace them with Obliq's own content and licensed media before going live.
 
 ## 2. Languages, Runtime, and Packages
 
-**Languages**
-- JavaScript (ES modules) with JSX for React components
-- CSS, using custom properties for design tokens; no CSS framework
-- HTML, rendered by Next.js
+### Languages and runtime
 
-**Runtime**
-- Node.js 20.9 or newer, which Next.js 16 requires (developed on Node 24)
-- npm (it ships with Node.js)
+| Technology              | Version                                                     |
+| ----------------------- | ----------------------------------------------------------- |
+| JavaScript (ES modules) | Used for all components, animation scripts, and configuration |
+| React / JSX             | React `^19.3.1`                                             |
+| CSS                     | Plain CSS with custom properties (no CSS framework)         |
+| Node.js                 | `20.9` or later (required by Next.js 16; developed on Node 24) |
+| npm                     | Use the npm version included with your Node.js installation |
 
-**Packages** (from `package.json`)
+The project uses the exact dependency versions recorded in `package-lock.json`. Version ranges below are from `package.json`.
 
-| Package | Version | Purpose |
-|---|---|---|
-| `next` | ^16.4.6 | Framework (App Router), dev server, production build |
-| `react` | ^19.3.1 | UI library |
-| `react-dom` | ^19.3.1 | React renderer for the browser |
-| `gsap` | ^3.15.1 | Animation engine; its ScrollTrigger plugin drives all the scroll animations |
+### Runtime dependencies
 
-**External resources loaded at runtime**
-- Fonts: *Stack Sans Headline* and *Google Sans* from Google Fonts. *Goli* loads from the asset CDN declared in `app/theme.css`.
-- Most images and videos load from an external CDN. The URLs live in one file, `lib/assets.js`. Images that were edited for this project are served locally from `public/images/`.
+| Package     | Version   | Purpose                                                        |
+| ----------- | --------- | -------------------------------------------------------------- |
+| `next`      | `^16.4.6` | Next.js app framework (App Router), dev server, and production build |
+| `react`     | `^19.3.1` | UI library                                                     |
+| `react-dom` | `^19.3.1` | React DOM rendering                                            |
+| `gsap`      | `^3.15.1` | Animations, including the ScrollTrigger plugin                 |
+
+### Development dependencies
+
+None. The project is plain JavaScript, so it needs no TypeScript compiler or type packages.
+
+Fonts: *Stack Sans Headline* and *Google Sans* are loaded from Google Fonts in `app/layout.jsx`. *Goli* is loaded with `@font-face` from the asset CDN in `app/theme.css`. No font package is needed.
 
 ## 3. Project Setup
 
-**Prerequisites:** Node.js 20.9+ and Git.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) **20.9 or later** (npm is included).
+- [Git for Windows](https://git-scm.com/download/win) on Windows, or [Git](https://git-scm.com/downloads) for macOS/Linux.
+- A terminal: PowerShell on Windows, or Terminal on macOS/Linux.
+
+See the [Next.js installation requirements](https://nextjs.org/docs/app/getting-started/installation#system-requirements) for runtime details.
+
+### Windows (PowerShell)
+
+```powershell
+git clone https://github.com/MirnaBahaa/Obliq-agency.git
+Set-Location Obliq-agency
+npm ci
+```
+
+### macOS / Linux (Terminal)
 
 ```bash
-# 1. Clone the repository
 git clone https://github.com/MirnaBahaa/Obliq-agency.git
 cd Obliq-agency
-
-# 2. Install dependencies
-npm install
-
-# 3. Start the development server (http://localhost:3000)
-npm run dev
+npm ci
 ```
 
-To run on a different port, for example when 3000 is already in use:
+### Environment variables
+
+None are required. If you add integrations later, put their values in `.env.local` in the project root. Variables prefixed with `NEXT_PUBLIC_` are exposed to the browser, so never put secrets in them. `.env*` files are ignored by Git.
+
+### Run and build
 
 ```bash
-npm run dev -- -p 4321
+npm run dev       # Start the development server at http://localhost:3000
+npm run build     # Create a production build
+npm run start     # Serve the production build
 ```
 
-**Production build**
-
-```bash
-npm run build   # creates an optimized build in .next/
-npm run start   # serves the production build on http://localhost:3000
-```
-
-**Common edits**
-- **Brand name, email, phone, address:** change `lib/brand.js`. Some components still contain contact details directly, so search the `components/` folder for the old values as well.
-- **Logo and wordmark:** edit `components/Brand.jsx`. Both are inline SVGs, and the browser-tab icon is `app/icon.svg`.
-- **Images and videos:** edit `lib/assets.js`. You can point an entry at a file in `public/images/`, for example `"/images/my-photo.webp"`.
-- **Colors, fonts, spacing:** edit the design tokens in the `:root` block at the top of `app/theme.css`.
+If port 3000 is already in use, pick another one: `npm run dev -- -p 4321`.
 
 ## 4. Project Structure
 
-```
-Obliq-agency/
-├── app/
-│   ├── layout.jsx          # Root layout: <html>/<head>, fonts, metadata, intro flash guard
-│   ├── page.jsx            # The homepage: assembles every section in order
-│   ├── theme.css           # Design tokens + all component classes and breakpoints
-│   ├── globals.css         # Base resets and layout supplements
-│   └── icon.svg            # Browser-tab icon
-├── components/
-│   ├── Navbar.jsx          # Fixed navbar + slide-out menu panel
-│   ├── Hero.jsx            # Wordmark, mountain, photo collage
-│   ├── Clients.jsx         # Client-logo marquee rows
-│   ├── Work.jsx            # Selected projects grid
-│   ├── Services.jsx        # Sticky stacking service cards
-│   ├── GreatBrands.jsx     # Scroll-colored statement + counters
-│   ├── Accent.jsx          # Red "Turning ideas into iconic brands" section
-│   ├── VideoExpand.jsx     # Growing full-screen video + word reveal
-│   ├── Testimonials.jsx    # Testimonial marquee
-│   ├── Blog.jsx            # Stories & insights cards
-│   ├── Faq.jsx             # FAQ accordion
-│   ├── Showcase.jsx        # Pinned zooming image gallery
-│   ├── CtaFooter.jsx       # Call to action + footer
-│   ├── Brand.jsx           # Obliq logo mark + wordmark (SVG)
-│   ├── Icons.jsx           # Inline SVG icon set
-│   ├── ui.jsx              # Shared pieces: Button, Label, BackgroundVideo
-│   └── SiteMotion.jsx      # Client component that starts the animation layer after hydration
-├── lib/
-│   ├── motion.js           # GSAP + ScrollTrigger animations (intro, scroll effects, marquees, hovers)
-│   ├── interactions.js     # Menu, FAQ, blog hover, logo marquee, video controls, newsletter form
-│   ├── assets.js           # Image / video URLs
-│   └── brand.js            # Brand name and contact details
-├── public/
-│   └── images/             # Locally hosted, edited images
-├── next.config.mjs         # Next.js config (React Strict Mode is off; see below)
-├── jsconfig.json           # "@/..." import alias
-├── package.json
-└── README.md
-```
+| Path                                   | Contents                                                                                                                          |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `app/layout.jsx`                       | Root document, fonts, metadata, and the script that hides the hero and navbar until the intro animation is ready                   |
+| `app/page.jsx`                         | Home page: assembles the navbar, all sections, the footer, and the motion layer                                                    |
+| `app/icon.svg`                         | Favicon                                                                                                                           |
+| `app/theme.css`                        | Base stylesheet: design tokens (colours, type scale, spacing), component classes, and the 991 / 767 / 479px breakpoints            |
+| `app/globals.css`                      | Additions: resets, layout fixes, and reduced-motion styles                                                                        |
+| `components/Navbar.jsx`                | Fixed navbar and slide-out menu panel                                                                                             |
+| `components/Hero.jsx`, `Clients.jsx`, `Work.jsx`, `Services.jsx`, `GreatBrands.jsx`, `Accent.jsx`, `VideoExpand.jsx`, `Testimonials.jsx`, `Blog.jsx`, `Faq.jsx`, `Showcase.jsx`, `CtaFooter.jsx` | One file per page section, in page order |
+| `components/SiteMotion.jsx`            | Client component that starts the animation scripts once, after hydration                                                          |
+| `components/Brand.jsx`                 | Obliq logo mark and wordmark (inline SVG)                                                                                         |
+| `components/ui.jsx`, `Icons.jsx`       | Shared button, bracketed label, background video with play/pause control, and SVG icons                                           |
+| `lib/motion.js`                        | All GSAP + ScrollTrigger animation: hero intro, reveals, counters, sticky and pinned scenes, marquees, and hover timelines          |
+| `lib/interactions.js`                  | Menu, FAQ accordion, blog hover, logo marquee, video controls, and newsletter form                                                |
+| `lib/brand.js`                         | Brand name and contact details                                                                                                    |
+| `lib/assets.js`                        | All image and video URLs                                                                                                          |
+| `public/images/`                       | Locally hosted, edited images                                                                                                     |
+| `next.config.mjs`, `jsconfig.json`     | Next.js configuration (React Strict Mode is off so the animation setup runs only once in development) and the `@/` import alias    |
+| `package.json` / `package-lock.json`   | Scripts and dependency definitions/lockfile                                                                                       |
 
-**How the page works:** the page is static markup rendered on the server. After hydration, `components/SiteMotion.jsx` runs `lib/motion.js` and `lib/interactions.js` once. These scripts enhance the DOM directly: they split headings into words, clone marquee items and attach scroll triggers. React Strict Mode is turned off in `next.config.mjs`, because in development it would run that setup twice.
+Many CSS classes use the `rt-` and `w-` prefixes. The stylesheets and the animation scripts both select elements by these names, so keep them in sync if you rename one.
 
-**Class names:** many CSS classes use the `rt-` prefix, and some use `w-`. The CSS and the animation scripts both select elements by these names, so keep them in sync if you rename one.
+## 5. Project Details
+
+| Field            | Value                                                                                   |
+| ---------------- | --------------------------------------------------------------------------------------- |
+| Project          | Obliq Agency - creative-agency website (frontend)                                       |
+| Owner / Designer | Mirna                                                                                   |
+| Repository       | [github.com/MirnaBahaa/Obliq-agency](https://github.com/MirnaBahaa/Obliq-agency)        |
+| Type             | Marketing website for a creative agency based in California                             |
+| Scope            | Homepage (13 parts: navbar, hero, client logos, work, services, brand statement, red accent section, video expand, testimonials, blog, FAQ, showcase gallery, call to action and footer) |
+| Layouts          | Desktop (≥992px), tablet (768–991px), phone landscape (480–767px), phone portrait (≤479px) |
+| Brand            | Obliq: original logo mark and wordmark; near-black `#111111`, red `#CF3D3D`, peach `#FFA589`, white `#FFFFFF` |
+| Typography       | Stack Sans Headline (headings), Goli (body), Google Sans (labels, menu, and form text)  |
+| Accessibility    | Keyboard-reachable menu and controls, ARIA labels, alt text, video pause controls, reduced-motion support |
+| Started          | November 2026                                                                           |
+
+### Remaining work
+
+- Replace the sample site content (client logos, projects, testimonials, blog posts, statistics, contact details) with Obliq's real information. Contact details appear in `lib/brand.js`, `components/Navbar.jsx`, and `components/CtaFooter.jsx`.
+- Replace the CDN-hosted photos, videos, and Goli font with licensed media stored in the project.
+- Retouch or replace the packaging photo (`public/images/work-packaging.webp`); its wrapper still shows the old brand name.
+- Build the pages the navigation already links to: Company, Work, Service, Blog, Pricing, Contact, License, Style guide, Changelog, the 404 and password-protected pages, and the individual project and blog pages.
+
+## Project Status
+
+| Field              | Value                       |
+| ------------------ | --------------------------- |
+| Designer           | Mirna                       |
+| Tool               | Claude Code                 |
