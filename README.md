@@ -1,5 +1,7 @@
 # Obliq Agency - Frontend
 
+![Obliq homepage hero: the giant OBLIQ wordmark over a mountain, with a photo collage below](docs/homepage.jpg)
+
 ## 1. Description
 
 A responsive, single-page website for **Obliq**, a creative agency, built with Next.js and animated with GSAP ScrollTrigger. Sections: hero, client logos, work, services, brand statement with counters, red accent section, expanding video, testimonials, blog, FAQ, showcase gallery, and call to action with footer. It respects `prefers-reduced-motion`.
@@ -33,6 +35,7 @@ No environment variables are needed.
 | `components/` | One file per section, plus the logo, icons, and shared UI       |
 | `lib/`        | Animations (`motion.js`, `interactions.js`), brand details (`brand.js`), and media URLs (`assets.js`) |
 | `public/images/` | Locally hosted images                                        |
+| `docs/`       | README screenshot                                               |
 
 ## 5. Project Details
 
