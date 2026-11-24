@@ -3,7 +3,7 @@ import { LogoMark } from "./Brand";
 
 const menuLinks = [
   { label: "Home", href: "/" },
-  { label: "Company", href: "/company" },
+  { label: "Company", href: "/about" },
   { label: "Work", href: "/works", cms: true },
   { label: "Service", href: "/service" },
   { label: "Blog", href: "/blog", cms: true },
@@ -23,17 +23,21 @@ const menuFoot = [
   { label: "404", href: "/404" },
   { label: "Password protected", href: "/401" },
   { label: "style-guide", href: "/style-guide" },
-  { label: "license", href: "/license" },
+  { label: "license", href: "/licenses" },
 ];
 
-export default function Navbar() {
+// Transparent variant used over full-bleed banners (Contact, Password).
+const OVERLAY = "w-variant-8e9db615-2192-8cf8-5feb-b6329913ce1f";
+
+export default function Navbar({ overlay = false, current = "/" }) {
+  const v = overlay ? " " + OVERLAY : "";
   return (
-    <header className="rt-navbar rt-bg-primary rt-index-5">
-      <div className="rt-navbar-bar">
+    <header className={`rt-navbar rt-bg-primary rt-index-5${v}`}>
+      <div className={`rt-navbar-bar${v}`}>
         <div className="rt-container">
           <div className="rt-navbar-main">
             <div className="rt-navbar-left">
-              <a href="/" aria-current="page" className="rt-navbar-logo w-inline-block w--current">
+              <a href="/" aria-current={current === "/" ? "page" : undefined} className={`rt-navbar-logo w-inline-block${current === "/" ? " w--current" : ""}`}>
                 <LogoMark />
               </a>
               <div className="rt-navbar-contact">
@@ -44,14 +48,14 @@ export default function Navbar() {
                   <span className="rt-nav-text">-</span>
                   <a href="https://dribbble.com/" target="_blank" rel="noopener" className="rt-nav-text rt-footer-link-hover">dr</a>
                 </div>
-                <div className="rt-vertical-line" />
+                <div className={`rt-vertical-line${v}`} />
                 <a href="mailto:info@example.com" className="rt-nav-text rt-color-primary rt-footer-link-hover rt-navbar-email">info@example.com</a>
               </div>
             </div>
             <div className="rt-navbar-actions">
-              <a href="tel:+18881234560" className="rt-navbar-call w-inline-block" aria-label="Call us: Get in touch">
-                <div className="rt-icon rt-color-primary w-embed"><PhoneIcon /></div>
-                <div className="rt-button-text-v1 rt-call-label">Get in touch</div>
+              <a href="tel:+18881234560" className={`rt-navbar-call w-inline-block${v}`} aria-label="Call us: Get in touch">
+                <div className={`rt-icon rt-color-primary w-embed${v}`}><PhoneIcon /></div>
+                <div className={`rt-button-text-v1 rt-call-label${v}`}>Get in touch</div>
               </a>
               <button type="button" className="rt-navbar-menu" data-menu-open aria-expanded="false" aria-controls="rt-menu-panel">
                 <div>menu</div>
@@ -72,7 +76,7 @@ export default function Navbar() {
             <nav className="rt-menu-links" aria-label="Primary">
               {menuLinks.map((l) => (
                 <div key={l.label} className="rt-menu-row" data-menu-item>
-                  <a href={l.href} className="rt-menu-link">{l.label}</a>
+                  <a href={l.href} aria-current={current === l.href ? "page" : undefined} className={`rt-menu-link${current === l.href ? " w--current" : ""}`}>{l.label}</a>
                   {l.cms && <div className="rt-menu-badge">+ CMS</div>}
                 </div>
               ))}

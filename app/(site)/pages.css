@@ -1,0 +1,10 @@
+/* Inner-page supplements on top of site.css. */
+[data-wf-bgvideo-fallback-img] { display: none; }
+.rt-anim-toggle{position:absolute;right:16px;bottom:16px;z-index:5;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(17,17,17,.72);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:auto;padding:0}
+.rt-anim-toggle:hover{background:#111}
+.rt-anim-toggle:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.rt-anim-toggle svg{width:18px;height:18px;fill:currentColor}
+.rt-stack-card>.rt-anim-toggle{top:20px;right:20px;bottom:auto}
+
+/* Transparent navbar variant (Contact, Password): white call button needs a dark phone icon. */
+.rt-navbar-call.w-variant-8e9db615-2192-8cf8-5feb-b6329913ce1f .rt-icon { color: var(--neutral-color--neutral-700); }

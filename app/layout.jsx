@@ -1,5 +1,3 @@
-import "./theme.css";
-import "./globals.css";
 
 export const metadata = {
   title: "Obliq – Creative Agency",

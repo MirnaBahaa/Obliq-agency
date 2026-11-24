@@ -4,7 +4,7 @@
 
 ## 1. Description
 
-A responsive, single-page website for **Obliq**, a creative agency, built with Next.js and animated with GSAP ScrollTrigger. Sections: hero, client logos, work, services, brand statement with counters, red accent section, expanding video, testimonials, blog, FAQ, showcase gallery, and call to action with footer. It respects `prefers-reduced-motion`.
+A responsive, multi-page website for **Obliq**, a creative agency, built with Next.js and animated with GSAP ScrollTrigger. Pages: home, about, service, works (with category filter), 10 work details, blog, 12 blog posts, pricing (monthly/yearly), contact, changelog, licenses, style guide, 404, and password. It respects `prefers-reduced-motion`.
 
 > **Note:** Projects, testimonials, statistics, blog posts, and contact details on the site are placeholders. Most media loads from a remote CDN.
 
@@ -31,9 +31,11 @@ No environment variables are needed.
 
 | Path          | Contents                                                        |
 | ------------- | --------------------------------------------------------------- |
-| `app/`        | Layout, homepage, favicon, and stylesheets (`theme.css`, `globals.css`) |
-| `components/` | One file per section, plus the logo, icons, and shared UI       |
-| `lib/`        | Animations (`motion.js`, `interactions.js`), brand details (`brand.js`), and media URLs (`assets.js`) |
+| `app/(home)/` | Homepage route and its stylesheet (`theme.css`)                 |
+| `app/(site)/` | All other routes, including `work/[slug]` and `post/[slug]`, with the full stylesheet (`site.css`) |
+| `components/` | Homepage sections, navbar, footer, logo, icons, and shared UI   |
+| `components/pages/` | Content for each inner page, plus the work and post templates |
+| `lib/`        | Animations and interactions (`motion.js`, `interactions.js`), brand details, media URLs, and the work and post data (`works.js`, `posts.js`) |
 | `public/images/` | Locally hosted images                                        |
 | `docs/`       | README screenshot                                               |
 
@@ -45,7 +47,7 @@ No environment variables are needed.
 | Owner / Designer | Mirna                                                                                   |
 | Repository       | [github.com/MirnaBahaa/Obliq-agency](https://github.com/MirnaBahaa/Obliq-agency)        |
 | Type             | Marketing website for a creative agency based in California                             |
-| Scope            | Homepage (13 parts: navbar, hero, client logos, work, services, brand statement, red accent section, video expand, testimonials, blog, FAQ, showcase gallery, call to action and footer) |
+| Scope            | 13 page designs and 37 routes: home, about, service, works, work details, blog, blog posts, pricing, contact, changelog, licenses, style guide, 404, password |
 | Layouts          | Desktop (≥992px), tablet (768–991px), phone landscape (480–767px), phone portrait (≤479px) |
 | Brand            | Obliq: original logo mark and wordmark; near-black `#111111`, red `#CF3D3D`, peach `#FFA589`, white `#FFFFFF` |
 | Typography       | Stack Sans Headline (headings), Goli (body), Google Sans (labels, menu, and form text)  |
@@ -55,8 +57,8 @@ No environment variables are needed.
 ### Remaining work
 
 - Replace placeholder content and CDN-hosted media with Obliq's own.
-- Retouch or replace the packaging photo; its wrapper still shows the old brand name.
-- Build the pages the navigation links to.
+- Retouch or replace the photos that still show the old brand name on the product (packaging, cans, book cover, jacket).
+- Connect the contact form, newsletter, and password page to a real backend; they only show their on-screen states now.
 
 ## Project Status
 

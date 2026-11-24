@@ -2,14 +2,14 @@ import { BRAND } from "@/lib/brand";
 
 /**
  * OBLIQ logo mark: a bold ring cut by an oblique bar, the same idea as the Q in the wordmark.
- * Drawn with currentColor; the accent dot uses the site's red.
+ * The accent dot uses the site's red (white with `mono`, for red backgrounds).
  */
-export function LogoMark({ size = 44, className }) {
+export function LogoMark({ size = 44, className, mono = false }) {
   return (
     <svg className={className} width={size} height={size} viewBox="0 0 44 44" fill="none" role="img" aria-label={`${BRAND.name} logo`} xmlns="http://www.w3.org/2000/svg">
       <circle cx="20" cy="20" r="14.5" stroke="#fff" strokeWidth="7" />
       <path d="M26 26L40 40" stroke="#fff" strokeWidth="7" />
-      <circle cx="38" cy="7" r="4" style={{ fill: "var(--accent-colors--accent-100)" }} />
+      <circle cx="38" cy="7" r="4" style={{ fill: mono ? "#fff" : "var(--accent-colors--accent-100)" }} />
     </svg>
   );
 }
