@@ -1,0 +1,110 @@
+/* Supplements to theme.css: base resets plus sizing for markup details the theme does not cover,
+   plus sizing for markup details the filtered reference sheet doesn't cover. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html, body { overflow-x: clip; }
+button, input { font: inherit; }
+button { color: inherit; }
+a { color: inherit; }
+svg { display: block; }
+
+/* Hide hero + navbar until the GSAP intro has set its start state (no flash). */
+html.is-loading .rt-banner,
+html.is-loading header.rt-navbar { visibility: hidden; }
+
+/* Navbar bar starts transparent; motion fades it to #111 after scrolling past it. */
+.rt-navbar-bar { background-color: rgba(17, 17, 17, 0); }
+.rt-navbar-logo img, .rt-menu-top img, .rt-footer-col-1-inside img.rt-footer-logo { width: 44px; height: auto; }
+.rt-navbar-socials { display: flex; gap: .25rem; align-items: center; }
+.rt-navbar-socials a { font-size: var(--_typography---sub-text--sub-size); }
+.rt-navbar-call .rt-icon { color: var(--text-color--text-primary); }
+@media (max-width: 767px) { .rt-navbar-email, .rt-navbar-contact .rt-vertical-line { display: none; } }
+@media (max-width: 479px) { .rt-navbar-socials { display: none; } }
+
+/* Menu panel */
+.rt-menu-foot { padding-top: var(--_layout---spacing--24px); padding-bottom: var(--_layout---spacing--24px); }
+.rt-menu-badge { font-family: var(--_typography---site-fonts--tertiary-font); font-size: .75rem; line-height: 1; color: #fff; font-weight: 600; }
+.rt-menu-list a { color: var(--text-color--text-primary); }
+.rt-menu-list .rt-underline { text-decoration: underline; }
+.rt-menu-address { font-style: italic; max-width: 16rem; }
+
+/* Hero */
+.rt-banner > .rt-container { position: relative; }
+.rt-banner-title img, .rt-footer-bottom-col-1 img { height: auto; }
+/* Keep the wordmark above the mountain so every letter stays legible. */
+.rt-banner-title { position: relative; z-index: 1; }
+.rt-banner-mountain img { height: auto; }
+.rt-banner-pair .rt-banner-card { aspect-ratio: 186 / 290; }
+.rt-banner-slider > .rt-banner-card { aspect-ratio: 326 / 445; }
+.rt-banner-foot { display: flex; justify-content: flex-end; min-height: 3.25rem; }
+.rt-banner > .rt-container > .rt-subtext { position: absolute; left: var(--_layout---container--gutter); bottom: 1rem; text-transform: uppercase; }
+@media (max-width: 991px) { .rt-banner-foot { justify-content: center; } }
+
+/* Client logos */
+.rt-client-card img { width: auto; height: auto; max-width: 62%; max-height: 46%; object-fit: contain; }
+
+/* Work */
+.rt-work-card .rt-banner-card { aspect-ratio: 498 / 303; }
+.rt-work-card .rt-work-card-top .rt-icon { color: var(--text-color--text-primary); }
+.rt-heading-row h2 { white-space: pre; }
+.rt-see-all { display: flex; justify-content: center; }
+
+/* Service stack cards */
+.rt-stack-card { min-height: 37.375rem; z-index: 0; }
+.rt-stack-card .rt-icon-button .rt-icon { color: var(--text-color--text-primary); }
+.rt-stack-card .rt-icon-text .rt-icon { color: var(--text-color--text-primary); }
+@media (max-width: 767px) { .rt-stack-card { min-height: 0; } }
+
+/* Great brands */
+.rt-great-row { display: flex; align-items: center; gap: var(--_layout---spacing--40px); max-width: var(--_layout---grid--col-seven); }
+.rt-avatar img { width: 100%; height: 100%; }
+.rt-avatar .rt-icon { color: var(--text-color--text-primary); }
+.rt-counter-card .rt-text-style-h4 { margin: 0; }
+.rt-counter-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.rt-counter-grid + .rt-counter-grid { margin-top: -1px; }
+.rt-counter-grid.rt-counter-grid-offset > .rt-counter-card:first-child { grid-column-start: 2; }
+@media (max-width: 991px) {
+  .rt-counter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rt-counter-grid.rt-counter-grid-offset > .rt-counter-card:first-child { grid-column-start: auto; }
+  .rt-great-row { flex-direction: column; align-items: flex-start; }
+}
+
+/* Accent section */
+.rt-accent-section > .rt-fill-behind { width: 100%; height: 100%; }
+.rt-arrow-pill .rt-icon { color: #fff; }
+
+/* Video expand section */
+.rt-text-scroll-main { max-width: var(--_layout---grid--col-seven); margin-left: auto; margin-right: auto; }
+.rt-text-scroll-main .rt-color-tertiary { font-style: italic; }
+.rt-video-control img { width: 100%; height: 100%; }
+
+/* Testimonials */
+.rt-testimonial-viewport { overflow: hidden; padding-top: var(--_layout---spacing--72px); }
+.rt-testimonial-card > .rt-fill-behind { width: 100%; height: 100%; opacity: .6; }
+
+/* Blog */
+.rt-blog-card > img { position: absolute; inset: 0; }
+.rt-blog-card-box > .rt-blog-card-overlay-inside { flex: 1; }
+.rt-view-button { font-family: var(--_typography---site-fonts--tertiary-font); font-weight: 600; font-size: .9375rem; }
+.rt-blog-date .rt-subtext { text-transform: uppercase; }
+
+/* FAQ */
+[faq="answer"] { height: 0; }
+.rt-faq-icon { color: var(--text-color--text-primary); }
+.rt-faq:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+
+/* Showcase */
+.rt-show-frames-box > .rt-container { width: 100%; }
+.rt-show-grid-video > img { width: 100%; height: 100%; }
+
+/* CTA + footer */
+.rt-cta-v1-top .rt-body-text-v2 { margin: 0; }
+.rt-footer-section .rt-footer-main { padding-top: var(--_layout---spacing--40px); }
+.rt-footer-col-4 .w-form { margin: 0; }
+.rt-footer-button { text-decoration: none; }
+.rt-footer-button .rt-icon { color: #fff; }
+.rt-footer-strip-text a { color: var(--text-color--text-primary); font-size: inherit; line-height: inherit; font-family: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.is-loading .rt-banner, html.is-loading header.rt-navbar { visibility: visible; }
+}
