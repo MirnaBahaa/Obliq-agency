@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { LogoMark } from "../Brand";
 
 /* StyleGuide page content. Generated from the reference markup; class names drive theme CSS and lib/motion.js. */
@@ -200,7 +201,7 @@ export default function StyleGuide() {
                 Buttons
               </h2>
               <div className="rt-sg-buttons">
-                <a href="/contact" className="rt-button w-inline-block">
+                <a href={withBase("/contact")} className="rt-button w-inline-block">
                   <div className="rt-button-text-v1">
                     Start something bold
                   </div>

@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 /* Works page content. Generated from the reference markup; class names drive theme CSS and lib/motion.js. */
 export default function Works() {
   return (
@@ -49,7 +50,7 @@ export default function Works() {
             <div data-filter-list="all" className="w-dyn-list">
               <div role="list" className="rt-works-list w-dyn-items">
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/editorial-magazine-book-design" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/editorial-magazine-book-design")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6aebed0227c460229ff5661e_works-image-one.webp" loading="lazy" alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px" srcSet="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6aebed0227c460229ff5661e_works-image-one-p-500.webp 500w, https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6aebed0227c460229ff5661e_works-image-one-p-800.webp 800w, https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6aebed0227c460229ff5661e_works-image-one-p-1080.webp 1080w, https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6aebed0227c460229ff5661e_works-image-one.webp 1600w" />
                     </div>
@@ -67,7 +68,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/digital-agency-tablet-app" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/digital-agency-tablet-app")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061103b8da340e344e5e1_6ad0604f6fe36660040df61a_works-image-two.webp" loading="lazy" alt="Digital agency app shown on a tablet with orange accents" />
                     </div>
@@ -85,7 +86,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/roadside-billboard-mockup" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/roadside-billboard-mockup")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5f1_6ad0604f63b3b1151fa0d861_works-image-three.webp" loading="lazy" alt="Roadside billboard mockup with an illustrated coffee ad" />
                     </div>
@@ -103,7 +104,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/gimbono-branding-identity-web-design" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/gimbono-branding-identity-web-design")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5ee_6ad0604f20e7b1828c094c4f_works-image-four.webp" loading="lazy" alt="Billboard mockup on top of a city building" />
                     </div>
@@ -121,7 +122,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/canvas-tote-bag-mockup" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/canvas-tote-bag-mockup")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5f4_6ad0604f20e7b1828c094c8d_works-image-five.webp" loading="lazy" alt="Canvas tote bag mockup standing on a sports court" />
                     </div>
@@ -139,7 +140,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/creative-branding-platform-web-design" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/creative-branding-platform-web-design")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5ea_6ad0604f3b8da340e3447cc8_works-image-six.webp" loading="lazy" alt="Creative branding platform website layout" />
                     </div>
@@ -157,7 +158,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/abstract-3d-nature-visualization" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/abstract-3d-nature-visualization")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5fb_6ad06050ce4c34a029a9bb24_works-image-seven.webp" loading="lazy" alt="Abstract 3D visualization of a mossy nature fragment" />
                     </div>
@@ -175,7 +176,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/fast-food-brand-packaging" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/fast-food-brand-packaging")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e606_6ad0605020e7b1828c094cf3_works-image-eight.webp" loading="lazy" alt="Fast food brand packaging with burger, cups and box" />
                     </div>
@@ -193,7 +194,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/corporate-stationery-design" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/corporate-stationery-design")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e611_6ad0605020e7b1828c094d9b_works-image-nine.webp" loading="lazy" alt="Corporate stationery card leaning against a teal wall" />
                     </div>
@@ -211,7 +212,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/gimbono-minimalist-business-card" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/gimbono-minimalist-business-card")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e61a_6ad0605063b3b1151fa0dacf_works-image-ten.webp" loading="lazy" alt="Minimalist business card floating among autumn leaves" />
                     </div>
@@ -233,7 +234,7 @@ export default function Works() {
             <div data-filter-list="Branding" className="rt-is-hidden w-dyn-list">
               <div role="list" className="rt-works-list w-dyn-items">
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/editorial-magazine-book-design" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/editorial-magazine-book-design")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6aebed0227c460229ff5661e_works-image-one.webp" loading="lazy" alt="" />
                     </div>
@@ -248,7 +249,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/roadside-billboard-mockup" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/roadside-billboard-mockup")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5f1_6ad0604f63b3b1151fa0d861_works-image-three.webp" loading="lazy" alt="Roadside billboard mockup with an illustrated coffee ad" />
                     </div>
@@ -263,7 +264,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/gimbono-branding-identity-web-design" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/gimbono-branding-identity-web-design")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5ee_6ad0604f20e7b1828c094c4f_works-image-four.webp" loading="lazy" alt="Billboard mockup on top of a city building" />
                     </div>
@@ -278,7 +279,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/canvas-tote-bag-mockup" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/canvas-tote-bag-mockup")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5f4_6ad0604f20e7b1828c094c8d_works-image-five.webp" loading="lazy" alt="Canvas tote bag mockup standing on a sports court" />
                     </div>
@@ -293,7 +294,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/fast-food-brand-packaging" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/fast-food-brand-packaging")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e606_6ad0605020e7b1828c094cf3_works-image-eight.webp" loading="lazy" alt="Fast food brand packaging with burger, cups and box" />
                     </div>
@@ -308,7 +309,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/corporate-stationery-design" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/corporate-stationery-design")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e611_6ad0605020e7b1828c094d9b_works-image-nine.webp" loading="lazy" alt="Corporate stationery card leaning against a teal wall" />
                     </div>
@@ -323,7 +324,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/gimbono-minimalist-business-card" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/gimbono-minimalist-business-card")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e61a_6ad0605063b3b1151fa0dacf_works-image-ten.webp" loading="lazy" alt="Minimalist business card floating among autumn leaves" />
                     </div>
@@ -342,7 +343,7 @@ export default function Works() {
             <div data-filter-list="3D art" className="rt-is-hidden w-dyn-list">
               <div role="list" className="rt-works-list w-dyn-items">
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/abstract-3d-nature-visualization" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/abstract-3d-nature-visualization")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5fb_6ad06050ce4c34a029a9bb24_works-image-seven.webp" loading="lazy" alt="Abstract 3D visualization of a mossy nature fragment" />
                     </div>
@@ -361,7 +362,7 @@ export default function Works() {
             <div data-filter-list="Development" className="rt-is-hidden w-dyn-list">
               <div role="list" className="rt-works-list w-dyn-items">
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/digital-agency-tablet-app" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/digital-agency-tablet-app")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061103b8da340e344e5e1_6ad0604f6fe36660040df61a_works-image-two.webp" loading="lazy" alt="Digital agency app shown on a tablet with orange accents" />
                     </div>
@@ -376,7 +377,7 @@ export default function Works() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/work/creative-branding-platform-web-design" className="rt-work-card w-inline-block">
+                  <a href={withBase("/work/creative-branding-platform-web-design")} className="rt-work-card w-inline-block">
                     <div className="rt-banner-card rt-work-media">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad061113b8da340e344e5ea_6ad0604f3b8da340e3447cc8_works-image-six.webp" loading="lazy" alt="Creative branding platform website layout" />
                     </div>

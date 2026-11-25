@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { work } from "@/lib/assets";
 import { Label } from "./ui";
 import { WorkArrow } from "./Icons";
@@ -24,7 +25,7 @@ export default function Work() {
 
         <div className="rt-work-grid">
           {projects.map((p) => (
-            <a key={p.title} href={p.href} className="rt-work-card w-inline-block">
+            <a key={p.title} href={withBase(p.href)} className="rt-work-card w-inline-block">
               <div className="rt-work-card-top">
                 <div className="rt-work-text">
                   <div className="rt-body-text-v4 rt-color-primary">{p.title}</div>
@@ -40,7 +41,7 @@ export default function Work() {
         </div>
 
         <div className="rt-see-all">
-          <a href="/works" className="rt-text-style-h5 rt-link-underline">See all works</a>
+          <a href={withBase("/works")} className="rt-text-style-h5 rt-link-underline">See all works</a>
         </div>
       </div>
     </section>

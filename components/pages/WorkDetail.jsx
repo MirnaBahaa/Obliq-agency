@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { getWork } from "@/lib/works";
 
 const NB = "\u00a0";
@@ -9,7 +10,7 @@ function Img({ image, eager }) {
 
 export function WorkCard({ work, filterKey = false }) {
   return (
-    <a href={`/work/${work.slug}`} className="rt-work-card w-inline-block">
+    <a href={withBase(`/work/${work.slug}`)} className="rt-work-card w-inline-block">
       <div className="rt-banner-card rt-work-media">
         <Img image={work.image} />
       </div>

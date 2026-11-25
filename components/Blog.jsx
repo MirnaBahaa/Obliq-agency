@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { blog } from "@/lib/assets";
 import { Button, Label } from "./ui";
 
@@ -26,7 +27,7 @@ const posts = [
 function PostCard({ post }) {
   const f = post.featured;
   return (
-    <a href={post.href} className={`rt-blog-card rt-post-card w-inline-block${f ? " rt-blog-card-featured" : ""}`}>
+    <a href={withBase(post.href)} className={`rt-blog-card rt-post-card w-inline-block${f ? " rt-blog-card-featured" : ""}`}>
       <img className="rt-full" src={post.img} alt={post.alt} loading="lazy" />
       <div className="rt-blog-card-overlay" />
       <div className={`rt-blog-card-top${f ? " rt-blog-card-top-featured" : ""}`}>

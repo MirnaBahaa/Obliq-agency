@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { service } from "@/lib/assets";
 import { Button } from "./ui";
 import { CornerDots, CornerStarburst, CornerSwirl, IconButtonArrow, ServiceDots, ServiceSquiggle, ServiceStarburst } from "./Icons";
@@ -86,7 +87,7 @@ export default function Services() {
                     <div className="rt-tag-list">
                       {c.tags.map((t) => <div key={t} className="rt-tag">{t}</div>)}
                     </div>
-                    <a href="/service" className="rt-icon-button w-inline-block" aria-label={`Explore ${c.title.join(" ")}`}>
+                    <a href={withBase("/service")} className="rt-icon-button w-inline-block" aria-label={`Explore ${c.title.join(" ")}`}>
                       <div className="rt-icon rt-color-primary w-embed"><IconButtonArrow /></div>
                     </a>
                   </div>

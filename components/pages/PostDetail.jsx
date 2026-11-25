@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { getPost } from "@/lib/posts";
 
 function Img({ image, eager }) {
@@ -17,7 +18,7 @@ function DateTag({ date }) {
 
 export function PostCard({ post }) {
   return (
-    <a href={`/post/${post.slug}`} className="rt-post-card w-inline-block">
+    <a href={withBase(`/post/${post.slug}`)} className="rt-post-card w-inline-block">
       <div className="rt-banner-card rt-banner-post">
         <Img image={post.image} />
       </div>

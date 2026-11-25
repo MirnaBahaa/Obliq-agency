@@ -1,9 +1,10 @@
+import { withBase } from "@/lib/path";
 import { ArrowUpRight, ButtonLine, VideoPauseIcon, VideoPlayIcon } from "./Icons";
 
 /** .rt-button pill CTA: label + 9px arrow + self-drawing outline (motion section 12). */
 export function Button({ href, children }) {
   return (
-    <a href={href} className="rt-button w-inline-block">
+    <a href={withBase(href)} className="rt-button w-inline-block">
       <div className="rt-button-text-v1">{children}</div>
       <div className="rt-icon rt-color-primary w-embed"><ArrowUpRight size={9} /></div>
       <div className="rt-button-line w-embed"><ButtonLine /></div>

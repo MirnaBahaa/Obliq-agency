@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { LogoMark } from "../Brand";
 
 /* Pricing page content. Generated from the reference markup; class names drive theme CSS and lib/motion.js. */
@@ -57,7 +58,7 @@ export default function Pricing() {
                         For brands ready to build a strong creative foundation.
                       </div>
                     </div>
-                    <a href="/contact" className="rt-button w-inline-block">
+                    <a href={withBase("/contact")} className="rt-button w-inline-block">
                       <div className="rt-button-text-v1">
                         Select plan
                       </div>
@@ -169,7 +170,7 @@ export default function Pricing() {
                         Brand essentials for emerging businesses.
                       </div>
                     </div>
-                    <a href="/contact" className="rt-button w-inline-block">
+                    <a href={withBase("/contact")} className="rt-button w-inline-block">
                       <div className="rt-button-text-v1">
                         Select plan
                       </div>
@@ -288,7 +289,7 @@ export default function Pricing() {
                         A complete creative experience built around your brand.
                       </div>
                     </div>
-                    <a href="/contact" className="rt-button w-inline-block">
+                    <a href={withBase("/contact")} className="rt-button w-inline-block">
                       <div className="rt-button-text-v1">
                         Select plan
                       </div>
@@ -397,7 +398,7 @@ export default function Pricing() {
               <p className="rt-gap-off rt-body-text-v1">
                 Unlock advanced features, greater flexibility, and dedicated enterprise support.
               </p>
-              <a href="/contact" className="rt-button w-inline-block">
+              <a href={withBase("/contact")} className="rt-button w-inline-block">
                 <div className="rt-button-text-v1">
                   Contact us today
                 </div>
@@ -507,7 +508,7 @@ export default function Pricing() {
                     </a>
                   </div>
                 </div>
-                <a href="/service" className="rt-button w-inline-block">
+                <a href={withBase("/service")} className="rt-button w-inline-block">
                   <div className="rt-button-text-v1">
                     Explore services
                   </div>

@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 /* Blog page content. Generated from the reference markup; class names drive theme CSS and lib/motion.js. */
 export default function Blog() {
   return (
@@ -26,7 +27,7 @@ export default function Blog() {
             <div className="w-dyn-list">
               <div role="list" className="rt-post-grid w-dyn-items">
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/modern-visual-identity-and-outdoor-banner-strategies-for-corporate-brands" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/modern-visual-identity-and-outdoor-banner-strategies-for-corporate-brands")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4f28155d8b86183583b_6ad0a441e4ac22b322fbb8b9_blog-corporate-banner.webp" loading="lazy" alt="Corporate banner mockup hanging outside a building as a person walks by" />
                     </div>
@@ -49,7 +50,7 @@ export default function Blog() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/seamless-user-interface-design-patterns-for-next-gen-mobile-apps" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/seamless-user-interface-design-patterns-for-next-gen-mobile-apps")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4f28155d8b861835850_6ad0a44277ce1f9e3d289937_blog-mobile-app.webp" loading="lazy" alt="Smartphone showing a mobile app interface on an orange chair" />
                     </div>
@@ -72,7 +73,7 @@ export default function Blog() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/building-cohesive-event-branding-and-identity-collaterals-creative-design" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/building-cohesive-event-branding-and-identity-collaterals-creative-design")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4f28155d8b861835859_6ad0a44397d58805ad41f835_blog-event-badge.webp" loading="lazy" alt="Hand holding a Obliq event badge on an orange lanyard" />
                     </div>
@@ -100,7 +101,7 @@ export default function Blog() {
               <div role="list" className="w-dyn-items">
                 <div role="listitem" className="w-dyn-item">
                   <div className="rt-split-row rt-split-tight">
-                    <a href="/post/capturing-unforgettable-moments-from-every-celebration" className="rt-split-media rt-split-wide w-inline-block">
+                    <a href={withBase("/post/capturing-unforgettable-moments-from-every-celebration")} className="rt-split-media rt-split-wide w-inline-block">
                       <div className="rt-banner-card rt-banner-feature">
                         <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4f38155d8b861835869_6ad0a443dc362eee7d381ae7_blog-celebration-tshirt.webp" loading="lazy" alt="Person wearing a white t-shirt with a playful orange illustration" />
                       </div>
@@ -126,7 +127,7 @@ export default function Blog() {
                         <div className="rt-font-b2">
                           [A deep dive into visual storytelling, creative direction, and capturing authentic narrative expressions through modern design..]
                         </div>
-                        <a href="/post/capturing-unforgettable-moments-from-every-celebration" className="rt-button w-inline-block">
+                        <a href={withBase("/post/capturing-unforgettable-moments-from-every-celebration")} className="rt-button w-inline-block">
                           <div className="rt-button-text-v1">
                             Read more
                           </div>
@@ -147,7 +148,7 @@ export default function Blog() {
             <div className="w-dyn-list">
               <div role="list" className="rt-post-grid w-dyn-items">
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/nighttime-visual-marketing-designing-illuminated-digital-posters" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/nighttime-visual-marketing-designing-illuminated-digital-posters")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6aebf0e79a067ea6c9691b5c_blog-night-billboards.webp" loading="lazy" alt="" />
                     </div>
@@ -170,7 +171,7 @@ export default function Blog() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/the-power-of-typographic-layouts-in-modern-editorial-design" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/the-power-of-typographic-layouts-in-modern-editorial-design")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4f38155d8b8618358b0_6ad0a4610d94e165bdb5bf41_blog-coffee-cup.webp" loading="lazy" alt="Hand holding a branded coffee cup mockup against a green wall" />
                     </div>
@@ -193,7 +194,7 @@ export default function Blog() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/apparel-branding-crafting-custom-typography-for-streetwear" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/apparel-branding-crafting-custom-typography-for-streetwear")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4f88155d8b8618358eb_6ad0a461b88578ff33348543_blog-city-light-poster.webp" loading="lazy" alt="Illuminated city light poster mockup at night" />
                     </div>
@@ -216,7 +217,7 @@ export default function Blog() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/premium-tactile-finishes-metallic-embossed-stationery-secrets" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/premium-tactile-finishes-metallic-embossed-stationery-secrets")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4f88155d8b8618358fc_6ad0a4618bde5ca584189379_blog-streetwear-tee.webp" loading="lazy" alt="Smiling woman in a black slogan t-shirt holding a card" />
                     </div>
@@ -239,7 +240,7 @@ export default function Blog() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/maximizing-brand-visibility-through-strategic-street-advertising" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/maximizing-brand-visibility-through-strategic-street-advertising")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4f98155d8b861835951_6ad0a462230b3fe21e8943e6_blog-embossed-stationery.webp" loading="lazy" alt="Close-up of engraved metal stationery with a logo" />
                     </div>
@@ -262,7 +263,7 @@ export default function Blog() {
                   </a>
                 </div>
                 <div role="listitem" className="w-dyn-item">
-                  <a href="/post/fresh-perspectives-to-help-brands-think-bigger-and-move-forward" className="rt-post-card w-inline-block">
+                  <a href={withBase("/post/fresh-perspectives-to-help-brands-think-bigger-and-move-forward")} className="rt-post-card w-inline-block">
                     <div className="rt-banner-card rt-banner-post">
                       <img src="https://cdn.prod.website-files.com/6a9ff8b8de6465026a2c5997/6ad0a4fa8155d8b861835a07_6ad0a462dc362eee7d3828e4_blog-column-advertising.webp" loading="lazy" alt="Column advertising mockup on a city street" />
                     </div>

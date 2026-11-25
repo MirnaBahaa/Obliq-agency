@@ -1,5 +1,7 @@
 # Obliq Agency - Frontend
 
+**Live site:** https://mirnabahaa.github.io/Obliq-agency/
+
 ![Obliq homepage hero: the giant OBLIQ wordmark over a mountain, with a photo collage below](docs/homepage.jpg)
 
 ## 1. Description
@@ -23,9 +25,10 @@ npm ci
 npm run dev       # http://localhost:3000
 npm run build     # production build
 npm run start     # serve the build
+npm run build:pages  # static export for GitHub Pages, written to out/
 ```
 
-No environment variables are needed.
+No environment variables are needed. Every push to `main` rebuilds the site and publishes it to GitHub Pages (`.github/workflows/deploy-pages.yml`).
 
 ## 4. Project Structure
 

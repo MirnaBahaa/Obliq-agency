@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 /* NotFound page content. Generated from the reference markup; class names drive theme CSS and lib/motion.js. */
 export default function NotFound() {
   return (
@@ -20,7 +21,7 @@ export default function NotFound() {
               <div className="rt-font-b2 rt-col-text-narrow">
                 Oops! it could be you or us, there is no page here. It might have been moved or deleted.
               </div>
-              <a href="/" className="rt-button w-inline-block">
+              <a href={withBase("/")} className="rt-button w-inline-block">
                 <div className="rt-button-text-v1">
                   Back to home
                 </div>

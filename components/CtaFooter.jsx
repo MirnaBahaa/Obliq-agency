@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { BRAND } from "@/lib/brand";
 import { LogoMark, Wordmark } from "./Brand";
 import { Button } from "./ui";
@@ -30,7 +31,7 @@ function LinkCol({ className, title, links, current }) {
       <div className="rt-body-text-v4 rt-color-primary">{title}</div>
       <div className="rt-link-wrapper w-layout-vflex">
         {links.map((l) => (
-          <a key={l.label} href={l.href} aria-current={l.href === current ? "page" : undefined}
+          <a key={l.label} href={withBase(l.href)} aria-current={l.href === current ? "page" : undefined}
             className={`rt-body-text-v5 rt-footer-link-hover${l.href === current ? " w--current" : ""}`}>
             {l.label}
           </a>
@@ -49,7 +50,7 @@ export function Footer({ current = "/" }) {
           <div className="rt-footer-top w-layout-hflex">
             <div className="rt-footer-col-1 w-layout-vflex">
               <div className="rt-footer-col-1-inside w-layout-vflex">
-                <a href="/" className="w-inline-block"><LogoMark /></a>
+                <a href={withBase("/")} className="w-inline-block"><LogoMark /></a>
                 <p className="rt-gap-off rt-font-b2">Whether you have a project in mind, or just want to say hi.</p>
               </div>
               <div className="rt-link-wrapper w-layout-vflex">
@@ -83,7 +84,7 @@ export function Footer({ current = "/" }) {
               <div className="rt-footer-bottom-col-1">
                 <Wordmark className="rt-color-primary" />
               </div>
-              <a href="/contact" className="rt-footer-button w-inline-block">
+              <a href={withBase("/contact")} className="rt-footer-button w-inline-block">
                 <div className="rt-button-text-v2">Get in touch</div>
                 <div className="rt-icon rt-color-primary w-embed"><ArrowUpRight size={13} /></div>
               </a>

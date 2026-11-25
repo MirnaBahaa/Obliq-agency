@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 import { PhoneIcon } from "./Icons";
 import { LogoMark } from "./Brand";
 
@@ -37,7 +38,7 @@ export default function Navbar({ overlay = false, current = "/" }) {
         <div className="rt-container">
           <div className="rt-navbar-main">
             <div className="rt-navbar-left">
-              <a href="/" aria-current={current === "/" ? "page" : undefined} className={`rt-navbar-logo w-inline-block${current === "/" ? " w--current" : ""}`}>
+              <a href={withBase("/")} aria-current={current === "/" ? "page" : undefined} className={`rt-navbar-logo w-inline-block${current === "/" ? " w--current" : ""}`}>
                 <LogoMark />
               </a>
               <div className="rt-navbar-contact">
@@ -69,14 +70,14 @@ export default function Navbar({ overlay = false, current = "/" }) {
       <div className="rt-menu-panel" id="rt-menu-panel" data-menu role="dialog" aria-modal="true" aria-label="Site menu">
         <div className="rt-menu-content">
           <div className="rt-menu-top" data-menu-item>
-            <a href="/" className="w-inline-block"><LogoMark /></a>
+            <a href={withBase("/")} className="w-inline-block"><LogoMark /></a>
             <button type="button" className="rt-navbar-menu rt-menu-close" data-menu-close>close</button>
           </div>
           <div className="rt-menu-body">
             <nav className="rt-menu-links" aria-label="Primary">
               {menuLinks.map((l) => (
                 <div key={l.label} className="rt-menu-row" data-menu-item>
-                  <a href={l.href} aria-current={current === l.href ? "page" : undefined} className={`rt-menu-link${current === l.href ? " w--current" : ""}`}>{l.label}</a>
+                  <a href={withBase(l.href)} aria-current={current === l.href ? "page" : undefined} className={`rt-menu-link${current === l.href ? " w--current" : ""}`}>{l.label}</a>
                   {l.cms && <div className="rt-menu-badge">+ CMS</div>}
                 </div>
               ))}
@@ -99,7 +100,7 @@ export default function Navbar({ overlay = false, current = "/" }) {
           {menuFoot.map((l, i) => (
             <div key={l.label} style={{ display: "contents" }}>
               {i > 0 && <div className="rt-menu-divider" />}
-              <a href={l.href} className="rt-menu-foot-link">{l.label}</a>
+              <a href={withBase(l.href)} className="rt-menu-foot-link">{l.label}</a>
             </div>
           ))}
         </div>

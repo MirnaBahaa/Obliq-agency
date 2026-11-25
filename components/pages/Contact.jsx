@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 /* Contact page content. Generated from the reference markup; class names drive theme CSS and lib/motion.js. */
 export default function Contact() {
   return (
@@ -58,7 +59,7 @@ export default function Contact() {
                 <div className="rt-text-style-h6">
                   Let’s create what’s next, together
                 </div>
-                <a href="/about" className="rt-button w-variant-d8842cc8-76c1-1792-42b2-5d946b7d4b76 w-inline-block">
+                <a href={withBase("/about")} className="rt-button w-variant-d8842cc8-76c1-1792-42b2-5d946b7d4b76 w-inline-block">
                   <div className="rt-button-text-v1">
                     Join our team
                   </div>

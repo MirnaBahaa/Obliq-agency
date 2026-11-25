@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/path";
 /* About page content. Generated from the reference markup; class names drive theme CSS and lib/motion.js. */
 export default function About() {
   return (
@@ -14,7 +15,7 @@ export default function About() {
                   [ We craft creative experiences that move culture forward. ]
                 </p>
               </div>
-              <a href="/contact" className="rt-button w-inline-block">
+              <a href={withBase("/contact")} className="rt-button w-inline-block">
                 <div className="rt-button-text-v1">
                   Contact us today
                 </div>
@@ -206,7 +207,7 @@ export default function About() {
                     </span>
                   </blockquote>
                 </div>
-                <a href="/service" className="rt-button w-inline-block">
+                <a href={withBase("/service")} className="rt-button w-inline-block">
                   <div className="rt-button-text-v1">
                     Explore our services
                   </div>
